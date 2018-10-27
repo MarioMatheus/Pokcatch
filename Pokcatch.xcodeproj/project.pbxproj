@@ -14,6 +14,8 @@
 		F20C2CEE2184782900F62160 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20C2CEC2184782900F62160 /* LaunchScreen.storyboard */; };
 		F20C2CF72184785700F62160 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F20C2CF62184785700F62160 /* CoreLocation.framework */; };
 		F20C2CF92184794B00F62160 /* PokemonMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2CF82184794B00F62160 /* PokemonMapViewController.swift */; };
+		F20C2CFF21847BB000F62160 /* ModelsPokeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2CFE21847BB000F62160 /* ModelsPokeAPI.swift */; };
+		F20C2D012184809500F62160 /* PokeAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D002184809500F62160 /* PokeAPIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		F20C2CEF2184782900F62160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F20C2CF62184785700F62160 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F20C2CF82184794B00F62160 /* PokemonMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonMapViewController.swift; sourceTree = "<group>"; };
+		F20C2CFE21847BB000F62160 /* ModelsPokeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsPokeAPI.swift; sourceTree = "<group>"; };
+		F20C2D002184809500F62160 /* PokeAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAPIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 		F20C2CFD2184797A00F62160 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F20C2CFE21847BB000F62160 /* ModelsPokeAPI.swift */,
+				F20C2D002184809500F62160 /* PokeAPIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -185,6 +191,8 @@
 				F20C2CF92184794B00F62160 /* PokemonMapViewController.swift in Sources */,
 				F20C2CE92184782500F62160 /* Pokcatch.xcdatamodeld in Sources */,
 				F20C2CE12184782500F62160 /* AppDelegate.swift in Sources */,
+				F20C2D012184809500F62160 /* PokeAPIService.swift in Sources */,
+				F20C2CFF21847BB000F62160 /* ModelsPokeAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
