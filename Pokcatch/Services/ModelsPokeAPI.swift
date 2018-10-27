@@ -40,6 +40,7 @@ struct TypesJSON: Codable {
 
 struct TypeJSON: Codable {
     let name: String
+    let url: String
 }
 
 struct MovesJSON: Codable {
@@ -56,7 +57,13 @@ struct VersionGroupDetailsJSON: Codable {
     let version_group: VersionGroupJSON
 }
 
-
 struct VersionGroupJSON: Codable {
     let name: String
+}
+
+struct MoveStatsJSON: Codable {
+    let name: String
+    let power: Int
+    let accuracy: Int
+    let type: TypeJSON
 }

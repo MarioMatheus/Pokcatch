@@ -16,6 +16,9 @@
 		F20C2CF92184794B00F62160 /* PokemonMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2CF82184794B00F62160 /* PokemonMapViewController.swift */; };
 		F20C2CFF21847BB000F62160 /* ModelsPokeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2CFE21847BB000F62160 /* ModelsPokeAPI.swift */; };
 		F20C2D012184809500F62160 /* PokeAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D002184809500F62160 /* PokeAPIService.swift */; };
+		F20C2D0321848BA600F62160 /* ServicesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D0221848BA600F62160 /* ServicesHelper.swift */; };
+		F20C2D0521848BF400F62160 /* PokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D0421848BF400F62160 /* PokemonType.swift */; };
+		F20C2D092184A07900F62160 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D082184A07900F62160 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		F20C2CF82184794B00F62160 /* PokemonMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonMapViewController.swift; sourceTree = "<group>"; };
 		F20C2CFE21847BB000F62160 /* ModelsPokeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsPokeAPI.swift; sourceTree = "<group>"; };
 		F20C2D002184809500F62160 /* PokeAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAPIService.swift; sourceTree = "<group>"; };
+		F20C2D0221848BA600F62160 /* ServicesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesHelper.swift; sourceTree = "<group>"; };
+		F20C2D0421848BF400F62160 /* PokemonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonType.swift; sourceTree = "<group>"; };
+		F20C2D082184A07900F62160 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 		F20C2CFC2184797400F62160 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F20C2D0421848BF400F62160 /* PokemonType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -113,6 +120,8 @@
 			children = (
 				F20C2CFE21847BB000F62160 /* ModelsPokeAPI.swift */,
 				F20C2D002184809500F62160 /* PokeAPIService.swift */,
+				F20C2D0221848BA600F62160 /* ServicesHelper.swift */,
+				F20C2D082184A07900F62160 /* CoreDataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -189,10 +198,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F20C2CF92184794B00F62160 /* PokemonMapViewController.swift in Sources */,
+				F20C2D0321848BA600F62160 /* ServicesHelper.swift in Sources */,
 				F20C2CE92184782500F62160 /* Pokcatch.xcdatamodeld in Sources */,
 				F20C2CE12184782500F62160 /* AppDelegate.swift in Sources */,
 				F20C2D012184809500F62160 /* PokeAPIService.swift in Sources */,
 				F20C2CFF21847BB000F62160 /* ModelsPokeAPI.swift in Sources */,
+				F20C2D092184A07900F62160 /* CoreDataManager.swift in Sources */,
+				F20C2D0521848BF400F62160 /* PokemonType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
