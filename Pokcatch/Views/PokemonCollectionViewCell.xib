@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pokemonCell" id="BoD-Ao-heJ" customClass="PokemonCollectionViewCell" customModule="Pokcatch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxn-f2-FSN">
+                        <rect key="frame" x="20" y="176" width="160" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="SfG-VE-TTN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dwa-lM-cTY">
+                        <rect key="frame" x="16" y="8" width="168" height="168"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Dwa-lM-cTY" secondAttribute="height" multiplier="1:1" id="yut-68-Ifb"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="0.25882352939999997" blue="0.22352941179999999" alpha="0.29460081335616439" colorSpace="custom" customColorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Dwa-lM-cTY" firstAttribute="top" secondItem="BoD-Ao-heJ" secondAttribute="top" constant="8" id="4ma-LQ-gVh"/>
+                <constraint firstItem="bxn-f2-FSN" firstAttribute="leading" secondItem="BoD-Ao-heJ" secondAttribute="leading" constant="20" id="Rvc-OL-ZS8"/>
+                <constraint firstItem="bxn-f2-FSN" firstAttribute="top" secondItem="Dwa-lM-cTY" secondAttribute="bottom" id="Smr-mt-AKr"/>
+                <constraint firstAttribute="bottom" secondItem="bxn-f2-FSN" secondAttribute="bottom" constant="8" id="UaN-hx-SZe"/>
+                <constraint firstItem="Dwa-lM-cTY" firstAttribute="centerX" secondItem="BoD-Ao-heJ" secondAttribute="centerX" id="i4s-az-PxO"/>
+                <constraint firstAttribute="trailing" secondItem="bxn-f2-FSN" secondAttribute="trailing" constant="20" id="svj-JA-5vx"/>
+            </constraints>
+            <size key="customSize" width="209" height="209"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipToBounds" value="YES"/>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="imageView" destination="Dwa-lM-cTY" id="cCa-py-gj5"/>
+                <outlet property="subtitleLabel" destination="bxn-f2-FSN" id="UPt-7N-Etv"/>
+            </connections>
+            <point key="canvasLocation" x="-136" y="196.10194902548727"/>
+        </collectionViewCell>
+    </objects>
+</document>

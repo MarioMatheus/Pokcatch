@@ -17,10 +17,12 @@
         <attribute name="defense" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="experience" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="frontSprite" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="hp" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="speed" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="wasCaught" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="cache" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cache" inverseName="pokemon" inverseEntity="Cache" syncable="YES"/>
         <relationship name="moves" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Move" inverseName="pokemon" inverseEntity="Move" syncable="YES"/>
         <relationship name="types" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Type" inverseName="pokemon" inverseEntity="Type" syncable="YES"/>
@@ -31,9 +33,9 @@
         <relationship name="pokemon" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pokemon" inverseName="types" inverseEntity="Pokemon" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Pokemon" positionX="-309.75" positionY="138.546875" width="128" height="223"/>
-        <element name="Cache" positionX="0" positionY="117" width="128" height="75"/>
-        <element name="Type" positionX="88.3046875" positionY="273.5546875" width="128" height="88"/>
+        <element name="Cache" positionX="0" positionY="117" width="128" height="73"/>
         <element name="Move" positionX="-122.28515625" positionY="383.80859375" width="128" height="118"/>
+        <element name="Pokemon" positionX="-309.75" positionY="138.546875" width="128" height="255"/>
+        <element name="Type" positionX="88.3046875" positionY="273.5546875" width="128" height="88"/>
     </elements>
 </model>

@@ -19,6 +19,20 @@
 		F20C2D0321848BA600F62160 /* ServicesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D0221848BA600F62160 /* ServicesHelper.swift */; };
 		F20C2D0521848BF400F62160 /* PokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D0421848BF400F62160 /* PokemonType.swift */; };
 		F20C2D092184A07900F62160 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D082184A07900F62160 /* CoreDataManager.swift */; };
+		F20C2D0B2184F25D00F62160 /* PokeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D0A2184F25D00F62160 /* PokeGenerator.swift */; };
+		F20C2D0D2184F3DC00F62160 /* SummonsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D0C2184F3DC00F62160 /* SummonsHelper.swift */; };
+		F20C2D0F21850D9F00F62160 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D0E21850D9F00F62160 /* CacheManager.swift */; };
+		F20C2D112185201900F62160 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D102185201900F62160 /* GradientView.swift */; };
+		F20C2D132185216000F62160 /* PokemonBattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D122185216000F62160 /* PokemonBattleViewController.swift */; };
+		F20C2D1521852A2800F62160 /* PokemonDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D1421852A2800F62160 /* PokemonDatabase.swift */; };
+		F20C2D1721852BBA00F62160 /* MyPokemonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D1621852BBA00F62160 /* MyPokemonsViewController.swift */; };
+		F20C2D1A21852C5800F62160 /* PokemonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D1821852C5800F62160 /* PokemonCollectionViewCell.swift */; };
+		F20C2D1B21852C5800F62160 /* PokemonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F20C2D1921852C5800F62160 /* PokemonCollectionViewCell.xib */; };
+		F20C2D1E21852D4700F62160 /* PokemonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D1C21852D4700F62160 /* PokemonDetailViewController.swift */; };
+		F20C2D1F21852D4700F62160 /* PokemonDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F20C2D1D21852D4700F62160 /* PokemonDetailViewController.xib */; };
+		F20C2D2121852D7800F62160 /* FileManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D2021852D7800F62160 /* FileManagerHelper.swift */; };
+		F20C2D232185FF4900F62160 /* PokemonChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D222185FF4900F62160 /* PokemonChoiceViewController.swift */; };
+		F20C2D2521860C7200F62160 /* PokeBattle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D2421860C7200F62160 /* PokeBattle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +50,20 @@
 		F20C2D0221848BA600F62160 /* ServicesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesHelper.swift; sourceTree = "<group>"; };
 		F20C2D0421848BF400F62160 /* PokemonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonType.swift; sourceTree = "<group>"; };
 		F20C2D082184A07900F62160 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		F20C2D0A2184F25D00F62160 /* PokeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeGenerator.swift; sourceTree = "<group>"; };
+		F20C2D0C2184F3DC00F62160 /* SummonsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummonsHelper.swift; sourceTree = "<group>"; };
+		F20C2D0E21850D9F00F62160 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		F20C2D102185201900F62160 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		F20C2D122185216000F62160 /* PokemonBattleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonBattleViewController.swift; sourceTree = "<group>"; };
+		F20C2D1421852A2800F62160 /* PokemonDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDatabase.swift; sourceTree = "<group>"; };
+		F20C2D1621852BBA00F62160 /* MyPokemonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPokemonsViewController.swift; sourceTree = "<group>"; };
+		F20C2D1821852C5800F62160 /* PokemonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonCollectionViewCell.swift; sourceTree = "<group>"; };
+		F20C2D1921852C5800F62160 /* PokemonCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PokemonCollectionViewCell.xib; sourceTree = "<group>"; };
+		F20C2D1C21852D4700F62160 /* PokemonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailViewController.swift; sourceTree = "<group>"; };
+		F20C2D1D21852D4700F62160 /* PokemonDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PokemonDetailViewController.xib; sourceTree = "<group>"; };
+		F20C2D2021852D7800F62160 /* FileManagerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerHelper.swift; sourceTree = "<group>"; };
+		F20C2D222185FF4900F62160 /* PokemonChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonChoiceViewController.swift; sourceTree = "<group>"; };
+		F20C2D2421860C7200F62160 /* PokeBattle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeBattle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +123,9 @@
 		F20C2CFA2184795000F62160 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F20C2D1821852C5800F62160 /* PokemonCollectionViewCell.swift */,
+				F20C2D1921852C5800F62160 /* PokemonCollectionViewCell.xib */,
+				F20C2D102185201900F62160 /* GradientView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -102,7 +133,12 @@
 		F20C2CFB2184795C00F62160 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F20C2D1C21852D4700F62160 /* PokemonDetailViewController.swift */,
+				F20C2D1D21852D4700F62160 /* PokemonDetailViewController.xib */,
 				F20C2CF82184794B00F62160 /* PokemonMapViewController.swift */,
+				F20C2D122185216000F62160 /* PokemonBattleViewController.swift */,
+				F20C2D1621852BBA00F62160 /* MyPokemonsViewController.swift */,
+				F20C2D222185FF4900F62160 /* PokemonChoiceViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -110,7 +146,11 @@
 		F20C2CFC2184797400F62160 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F20C2D0C2184F3DC00F62160 /* SummonsHelper.swift */,
 				F20C2D0421848BF400F62160 /* PokemonType.swift */,
+				F20C2D0A2184F25D00F62160 /* PokeGenerator.swift */,
+				F20C2D2021852D7800F62160 /* FileManagerHelper.swift */,
+				F20C2D2421860C7200F62160 /* PokeBattle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -122,6 +162,8 @@
 				F20C2D002184809500F62160 /* PokeAPIService.swift */,
 				F20C2D0221848BA600F62160 /* ServicesHelper.swift */,
 				F20C2D082184A07900F62160 /* CoreDataManager.swift */,
+				F20C2D0E21850D9F00F62160 /* CacheManager.swift */,
+				F20C2D1421852A2800F62160 /* PokemonDatabase.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -186,7 +228,9 @@
 			files = (
 				F20C2CEE2184782900F62160 /* LaunchScreen.storyboard in Resources */,
 				F20C2CEB2184782900F62160 /* Assets.xcassets in Resources */,
+				F20C2D1B21852C5800F62160 /* PokemonCollectionViewCell.xib in Resources */,
 				F20C2CE62184782500F62160 /* Main.storyboard in Resources */,
+				F20C2D1F21852D4700F62160 /* PokemonDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,12 +243,24 @@
 			files = (
 				F20C2CF92184794B00F62160 /* PokemonMapViewController.swift in Sources */,
 				F20C2D0321848BA600F62160 /* ServicesHelper.swift in Sources */,
+				F20C2D2521860C7200F62160 /* PokeBattle.swift in Sources */,
+				F20C2D112185201900F62160 /* GradientView.swift in Sources */,
+				F20C2D1721852BBA00F62160 /* MyPokemonsViewController.swift in Sources */,
 				F20C2CE92184782500F62160 /* Pokcatch.xcdatamodeld in Sources */,
 				F20C2CE12184782500F62160 /* AppDelegate.swift in Sources */,
+				F20C2D0F21850D9F00F62160 /* CacheManager.swift in Sources */,
 				F20C2D012184809500F62160 /* PokeAPIService.swift in Sources */,
 				F20C2CFF21847BB000F62160 /* ModelsPokeAPI.swift in Sources */,
+				F20C2D132185216000F62160 /* PokemonBattleViewController.swift in Sources */,
+				F20C2D1A21852C5800F62160 /* PokemonCollectionViewCell.swift in Sources */,
 				F20C2D092184A07900F62160 /* CoreDataManager.swift in Sources */,
+				F20C2D1521852A2800F62160 /* PokemonDatabase.swift in Sources */,
+				F20C2D0B2184F25D00F62160 /* PokeGenerator.swift in Sources */,
+				F20C2D1E21852D4700F62160 /* PokemonDetailViewController.swift in Sources */,
+				F20C2D0D2184F3DC00F62160 /* SummonsHelper.swift in Sources */,
 				F20C2D0521848BF400F62160 /* PokemonType.swift in Sources */,
+				F20C2D2121852D7800F62160 /* FileManagerHelper.swift in Sources */,
+				F20C2D232185FF4900F62160 /* PokemonChoiceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

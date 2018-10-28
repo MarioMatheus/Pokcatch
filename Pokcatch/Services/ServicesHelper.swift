@@ -6,15 +6,18 @@
 //  Copyright © 2018 Coding Eagles. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ServicesHelper {
     
     static func convertPokemonJSON(pokemonJSON: PokemonJSON) -> Pokemon {
         let pokemon = Pokemon(context: CoreDataManager.shared.context)
         pokemon.id = Int32(pokemonJSON.id)
-        pokemon.name = pokemonJSON.name
+        pokemon.name = pokemonJSON.name.capitalizingFirstLetter()
         pokemon.experience = Int32(pokemonJSON.base_experience)
+        pokemon.height = Int32(pokemonJSON.height)
+        pokemon.wasCaught = false
+        
         setStats(pokemonJSON.stats, at: pokemon)
         setSprites(pokemonJSON.sprites, at: pokemon)
         setTypes(pokemonJSON.types, at: pokemon)
@@ -72,3 +75,29 @@ class ServicesHelper {
     
 }
 
+
+// MARK: - extension String
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).uppercased() + dropFirst()
+    }
+    
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
+}
+
+
+// MARK: - extension UIImage
+extension UIImage {
+    
+    class func imageWithImage(image: UIImage, scaledToSize newSize:CGSize) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0);
+        image.draw(in: CGRect(origin: CGPoint.zero, size: CGSize(width: newSize.width, height: newSize.height)))
+        let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
+    
+}

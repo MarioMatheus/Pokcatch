@@ -12,6 +12,7 @@ import Foundation
 struct PokemonJSON: Codable {
     let id: Int
     let name: String
+    let height: Int
     let base_experience: Int
     let sprites: SpriteJSON
     let stats: [StatsJSON]
