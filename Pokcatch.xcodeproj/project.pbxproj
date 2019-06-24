@@ -33,6 +33,9 @@
 		F20C2D2121852D7800F62160 /* FileManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D2021852D7800F62160 /* FileManagerHelper.swift */; };
 		F20C2D232185FF4900F62160 /* PokemonChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D222185FF4900F62160 /* PokemonChoiceViewController.swift */; };
 		F20C2D2521860C7200F62160 /* PokeBattle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D2421860C7200F62160 /* PokeBattle.swift */; };
+		F20C2D27218628E700F62160 /* TypeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D26218628E700F62160 /* TypeBackground.swift */; };
+		F20C2D2A21862ADC00F62160 /* PokemonStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20C2D2821862ADC00F62160 /* PokemonStatsViewController.swift */; };
+		F20C2D2B21862ADC00F62160 /* PokemonStatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F20C2D2921862ADC00F62160 /* PokemonStatsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,9 @@
 		F20C2D2021852D7800F62160 /* FileManagerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerHelper.swift; sourceTree = "<group>"; };
 		F20C2D222185FF4900F62160 /* PokemonChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonChoiceViewController.swift; sourceTree = "<group>"; };
 		F20C2D2421860C7200F62160 /* PokeBattle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeBattle.swift; sourceTree = "<group>"; };
+		F20C2D26218628E700F62160 /* TypeBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeBackground.swift; sourceTree = "<group>"; };
+		F20C2D2821862ADC00F62160 /* PokemonStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonStatsViewController.swift; sourceTree = "<group>"; };
+		F20C2D2921862ADC00F62160 /* PokemonStatsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonStatsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,8 @@
 				F20C2D122185216000F62160 /* PokemonBattleViewController.swift */,
 				F20C2D1621852BBA00F62160 /* MyPokemonsViewController.swift */,
 				F20C2D222185FF4900F62160 /* PokemonChoiceViewController.swift */,
+				F20C2D2821862ADC00F62160 /* PokemonStatsViewController.swift */,
+				F20C2D2921862ADC00F62160 /* PokemonStatsViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -146,6 +154,7 @@
 		F20C2CFC2184797400F62160 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F20C2D26218628E700F62160 /* TypeBackground.swift */,
 				F20C2D0C2184F3DC00F62160 /* SummonsHelper.swift */,
 				F20C2D0421848BF400F62160 /* PokemonType.swift */,
 				F20C2D0A2184F25D00F62160 /* PokeGenerator.swift */,
@@ -230,6 +239,7 @@
 				F20C2CEB2184782900F62160 /* Assets.xcassets in Resources */,
 				F20C2D1B21852C5800F62160 /* PokemonCollectionViewCell.xib in Resources */,
 				F20C2CE62184782500F62160 /* Main.storyboard in Resources */,
+				F20C2D2B21862ADC00F62160 /* PokemonStatsViewController.xib in Resources */,
 				F20C2D1F21852D4700F62160 /* PokemonDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +254,7 @@
 				F20C2CF92184794B00F62160 /* PokemonMapViewController.swift in Sources */,
 				F20C2D0321848BA600F62160 /* ServicesHelper.swift in Sources */,
 				F20C2D2521860C7200F62160 /* PokeBattle.swift in Sources */,
+				F20C2D27218628E700F62160 /* TypeBackground.swift in Sources */,
 				F20C2D112185201900F62160 /* GradientView.swift in Sources */,
 				F20C2D1721852BBA00F62160 /* MyPokemonsViewController.swift in Sources */,
 				F20C2CE92184782500F62160 /* Pokcatch.xcdatamodeld in Sources */,
@@ -254,6 +265,7 @@
 				F20C2D132185216000F62160 /* PokemonBattleViewController.swift in Sources */,
 				F20C2D1A21852C5800F62160 /* PokemonCollectionViewCell.swift in Sources */,
 				F20C2D092184A07900F62160 /* CoreDataManager.swift in Sources */,
+				F20C2D2A21862ADC00F62160 /* PokemonStatsViewController.swift in Sources */,
 				F20C2D1521852A2800F62160 /* PokemonDatabase.swift in Sources */,
 				F20C2D0B2184F25D00F62160 /* PokeGenerator.swift in Sources */,
 				F20C2D1E21852D4700F62160 /* PokemonDetailViewController.swift in Sources */,

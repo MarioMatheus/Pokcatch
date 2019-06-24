@@ -9,8 +9,8 @@
 import UIKit
 
 
-protocol PokeAPIMovesDelegate {
-    func movesSelected(_ moves: [MoveStatsJSON])
+protocol PokeAPIMovesDelegate: class {
+    func movesSelected(_ moves: [MoveStatsJSON], forPokemonName name: String)
 }
 
 
@@ -99,39 +99,44 @@ class PokeAPIService {
     
     
     
-    var delegate: PokeAPIMovesDelegate?
-    var validMoves = [MoveStatsJSON]()
-    var validMovesCount = 0 {
+    weak var delegate: PokeAPIMovesDelegate?
+    var validMoves = [String: [MoveStatsJSON]]()
+    var validMovesCount: [String: Int] = [:] {
         didSet {
-            if validMovesCount == 3 {
-                delegate?.movesSelected(validMoves)
+            validMovesCount.keys.forEach { key in
+                if validMovesCount[key] == 3 { delegate?.movesSelected(validMoves[key]!, forPokemonName: key) }
             }
         }
     }
-    var movesRemaining = 1 {
+    var movesRemaining: [String: Int] = [:] {
         didSet {
-            if movesRemaining == 0 && validMovesCount < 3 {
-                delegate?.movesSelected(validMoves)
+            movesRemaining.keys.forEach { key in
+                if movesRemaining[key] == 0 && validMovesCount[key]! < 3 {
+                    delegate?.movesSelected(validMoves[key]!, forPokemonName: key)
+                }
             }
         }
     }
     
-    func choiceMovesOf(moves: [MovesJSON]) {
+    func choiceMovesFor(pokemonJSON: PokemonJSON /*moves: [MovesJSON]*/) {
         var movesFiltered = [MovesJSON]()
+        let moves = pokemonJSON.moves
         
         movesFiltered = moves.filter { movesJSON -> Bool in
             return movesJSON.version_group_details
-                .contains(where: { $0.version_group.name == "yellow"})
-        }
-        
-        movesRemaining = movesFiltered.count
+                .contains(where: { $0.version_group.name == "yellow" || $0.version_group.name == "red-blue" })
+        }.shuffled()
+        validMoves[pokemonJSON.name] = []
+        validMovesCount[pokemonJSON.name] = 0
+        movesRemaining[pokemonJSON.name] = movesFiltered.count
         movesFiltered.forEach { movesJSON in
             requestMoveFrom(link: movesJSON.move.url, completion: { moveStatsJSON in
                 if moveStatsJSON != nil && moveStatsJSON!.power > 10 {
-                    self.validMoves.append(moveStatsJSON!)
-                    self.validMovesCount += 1
+                    self.validMoves[pokemonJSON.name]?.append(moveStatsJSON!)
+//                    self.validMoves.append(moveStatsJSON!)
+                    self.validMovesCount[pokemonJSON.name] = self.validMovesCount[pokemonJSON.name]! + 1
                 }
-                self.movesRemaining -= 1
+                self.movesRemaining[pokemonJSON.name] = self.movesRemaining[pokemonJSON.name]! + 1
             })
         }
     }

@@ -16,9 +16,8 @@ class PokemonDetailViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var typesLabel: UILabel!
-    @IBOutlet weak var experienceLabel: UILabel!
     @IBOutlet weak var backgroundGradientView: GradientView!
     
     var delegate: PokemonDetailViewControllerDelegate?
@@ -41,23 +40,31 @@ class PokemonDetailViewController: UIViewController {
         super.viewDidLoad()
         
         nameLabel.text = pokemon!.name
-//        weightLabel.text = "Weight: \(String(pokemon!.weight)) lbs"
-//        imageView.image = pokemon?.sprite
-//        experienceLabel.text = String(pokemon!.baseExperience) + " XP"
-//
+        heightLabel.text = "Height: \(String(pokemon!.height))"
+        imageView.image = FileManagerHelper.getImageFrom(path: (pokemon?.frontSprite)!)
+        
+        let types = pokemon?.types?.map({ type -> PokemonType in
+            let pokemonType = type as! Type
+            return PokemonType(rawValue: Int(pokemonType.id))!
+        })
+            
+        typesLabel.text = types!.reduce("Type: ", { (result, pokemonType) -> String in
+            return "\(result) \(pokemonType.stringValue)"
+        })
+        
 //        typesLabel.text = pokemon?.types.reduce("Type: ", { (result, string) -> String in
 //            return "\(result.capitalizingFirstLetter()) \(string.capitalizingFirstLetter())"
 //        })
 //
-//        if pokemon?.types.count == 1 {
-//            imageView.backgroundColor = UIColor.colorForPokemonType((pokemon?.types.first?.capitalizingFirstLetter())!)
-//        } else {
-//            let typeOne = pokemon!.types[0].capitalizingFirstLetter()
-//            let typeTwo = pokemon!.types[1].capitalizingFirstLetter()
-//
-//            backgroundGradientView.topColor = UIColor.colorForPokemonType(typeOne)
-//            backgroundGradientView.bottomColor = UIColor.colorForPokemonType(typeTwo)
-//        }
+        if types!.count == 1 {
+            imageView.backgroundColor = UIColor.colorForPokemonType((types!.first?.stringValue)!)
+        } else {
+            let typeOne = types![0].stringValue.capitalizingFirstLetter()
+            let typeTwo = types![1].stringValue.capitalizingFirstLetter()
+
+            backgroundGradientView.topColor = UIColor.colorForPokemonType(typeOne)
+            backgroundGradientView.bottomColor = UIColor.colorForPokemonType(typeTwo)
+        }
         
     }
 

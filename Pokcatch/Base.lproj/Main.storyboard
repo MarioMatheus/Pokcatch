@@ -112,15 +112,10 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fO0-OZ-j1m">
-                                <rect key="frame" x="201" y="60" width="134" height="134"/>
+                                <rect key="frame" x="211" y="80" width="134" height="134"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fO0-OZ-j1m" secondAttribute="height" multiplier="1:1" id="r1p-8I-YTJ"/>
                                 </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pokeball" translatesAutoresizingMaskIntoConstraints="NO" id="nfp-2O-xth">
-                                <rect key="frame" x="157" y="587" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRy-UI-lbI">
                                 <rect key="frame" x="82.5" y="353.5" width="23" height="21"/>
@@ -130,6 +125,11 @@
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="A8I-pX-ssl">
                                 <rect key="frame" x="10" y="384.5" width="167.5" height="2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfm-lk-xsV">
                                 <rect key="frame" x="270" y="353.5" width="23" height="21"/>
@@ -140,7 +140,84 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9I9-4Q-YLo">
                                 <rect key="frame" x="197.5" y="384.5" width="167.5" height="2"/>
                                 <color key="progressTintColor" red="1" green="0.25882352939999997" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVi-Ej-Rng">
+                                <rect key="frame" x="197.5" y="547" width="157.5" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.25882352939999997" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Run">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="runButtonDidPressed:" destination="Ndl-E7-1P2" eventType="touchUpInside" id="FDO-8t-7MY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4h4-cl-OFv">
+                                <rect key="frame" x="20" y="547" width="157.5" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.25882352939999997" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Move 3">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="thirdButtonDidPressed:" destination="Ndl-E7-1P2" eventType="touchUpInside" id="j2Y-L0-sT2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbi-nt-Qry">
+                                <rect key="frame" x="20" y="509" width="157.5" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.25882352939999997" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Move 1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="firstMoveButtonDidPressed:" destination="Ndl-E7-1P2" eventType="touchUpInside" id="3cz-XR-Olw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1U4-rn-Hxn">
+                                <rect key="frame" x="197.5" y="509" width="157.5" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.25882352939999997" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Move 2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="secondMoveButtonDidPressed:" destination="Ndl-E7-1P2" eventType="touchUpInside" id="5q4-JR-M0u"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Start Battle" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v17-wp-ab7">
+                                <rect key="frame" x="36" y="406.5" width="303" height="92.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pokeball" translatesAutoresizingMaskIntoConstraints="NO" id="nfp-2O-xth">
+                                <rect key="frame" x="157" y="587" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -148,29 +225,53 @@
                             <constraint firstItem="7Wy-nK-5nD" firstAttribute="leading" secondItem="eX0-Gr-qCo" secondAttribute="leading" constant="20" id="5xd-35-lwY"/>
                             <constraint firstItem="fO0-OZ-j1m" firstAttribute="width" secondItem="7Wy-nK-5nD" secondAttribute="width" multiplier="0.4" id="86o-cG-0bJ"/>
                             <constraint firstItem="7Wy-nK-5nD" firstAttribute="height" secondItem="eX0-Gr-qCo" secondAttribute="height" multiplier="0.5" id="8ZG-D6-6QU"/>
+                            <constraint firstItem="4h4-cl-OFv" firstAttribute="leading" secondItem="eX0-Gr-qCo" secondAttribute="leading" constant="20" id="ABr-tZ-m3M"/>
+                            <constraint firstItem="4h4-cl-OFv" firstAttribute="height" secondItem="qVi-Ej-Rng" secondAttribute="height" id="CBq-Ma-dll"/>
+                            <constraint firstItem="v17-wp-ab7" firstAttribute="leading" secondItem="eX0-Gr-qCo" secondAttribute="leadingMargin" constant="20" id="Fy4-AP-Rlk"/>
                             <constraint firstItem="7Wy-nK-5nD" firstAttribute="top" secondItem="eX0-Gr-qCo" secondAttribute="top" id="Hbs-J7-pfI"/>
-                            <constraint firstAttribute="trailing" secondItem="fO0-OZ-j1m" secondAttribute="trailing" constant="40" id="Mxq-so-N2v"/>
+                            <constraint firstItem="1U4-rn-Hxn" firstAttribute="bottom" secondItem="Gbi-nt-Qry" secondAttribute="bottom" id="K7X-KK-God"/>
+                            <constraint firstItem="Gbi-nt-Qry" firstAttribute="width" secondItem="4h4-cl-OFv" secondAttribute="width" id="KgN-At-8sm"/>
+                            <constraint firstAttribute="trailing" secondItem="fO0-OZ-j1m" secondAttribute="trailing" constant="30" id="Mxq-so-N2v"/>
+                            <constraint firstItem="Gbi-nt-Qry" firstAttribute="height" secondItem="4h4-cl-OFv" secondAttribute="height" id="O9Z-UV-kpy"/>
+                            <constraint firstItem="qVi-Ej-Rng" firstAttribute="width" secondItem="eX0-Gr-qCo" secondAttribute="width" multiplier="0.5" constant="-30" id="P0O-kE-52b"/>
                             <constraint firstItem="KiW-PF-osB" firstAttribute="width" secondItem="7Wy-nK-5nD" secondAttribute="width" multiplier="0.5" id="R8w-oj-dzW"/>
-                            <constraint firstItem="fO0-OZ-j1m" firstAttribute="top" secondItem="7Wy-nK-5nD" secondAttribute="top" constant="60" id="Wk4-1M-hK9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v17-wp-ab7" secondAttribute="trailing" constant="20" id="S7r-Bc-I3c"/>
+                            <constraint firstItem="4h4-cl-OFv" firstAttribute="bottom" secondItem="qVi-Ej-Rng" secondAttribute="bottom" id="Sjg-Sz-Kjp"/>
+                            <constraint firstItem="1U4-rn-Hxn" firstAttribute="trailing" secondItem="qVi-Ej-Rng" secondAttribute="trailing" id="U1y-Kf-9cN"/>
+                            <constraint firstAttribute="trailing" secondItem="qVi-Ej-Rng" secondAttribute="trailing" constant="20" id="UL2-x9-yy9"/>
+                            <constraint firstItem="fO0-OZ-j1m" firstAttribute="top" secondItem="7Wy-nK-5nD" secondAttribute="top" constant="80" id="Wk4-1M-hK9"/>
                             <constraint firstAttribute="trailing" secondItem="7Wy-nK-5nD" secondAttribute="trailing" constant="20" id="XWQ-gr-QiX"/>
                             <constraint firstItem="qRy-UI-lbI" firstAttribute="centerX" secondItem="A8I-pX-ssl" secondAttribute="centerX" id="c2j-51-gdA"/>
+                            <constraint firstItem="Gbi-nt-Qry" firstAttribute="leading" secondItem="4h4-cl-OFv" secondAttribute="leading" id="g9H-WQ-TEF"/>
+                            <constraint firstItem="4h4-cl-OFv" firstAttribute="width" secondItem="qVi-Ej-Rng" secondAttribute="width" id="iUu-Fm-bhM"/>
+                            <constraint firstItem="1U4-rn-Hxn" firstAttribute="height" secondItem="qVi-Ej-Rng" secondAttribute="height" id="kL2-jP-oXe"/>
+                            <constraint firstItem="Gbi-nt-Qry" firstAttribute="top" secondItem="v17-wp-ab7" secondAttribute="bottom" constant="10" id="lGH-gE-BXO"/>
+                            <constraint firstItem="1U4-rn-Hxn" firstAttribute="width" secondItem="qVi-Ej-Rng" secondAttribute="width" id="n43-vN-yum"/>
                             <constraint firstItem="9I9-4Q-YLo" firstAttribute="bottom" secondItem="A8I-pX-ssl" secondAttribute="bottom" id="nsP-rA-S0d"/>
                             <constraint firstItem="A8I-pX-ssl" firstAttribute="width" secondItem="eX0-Gr-qCo" secondAttribute="width" multiplier="0.5" constant="-20" id="nvf-fl-gA8"/>
                             <constraint firstAttribute="trailing" secondItem="9I9-4Q-YLo" secondAttribute="trailing" constant="10" id="o3c-tZ-zTY"/>
                             <constraint firstItem="9I9-4Q-YLo" firstAttribute="width" secondItem="eX0-Gr-qCo" secondAttribute="width" multiplier="0.5" constant="-20" id="ots-ue-20B"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="qVi-Ej-Rng" secondAttribute="bottom" constant="90" id="p3C-7r-DxC"/>
                             <constraint firstItem="KiW-PF-osB" firstAttribute="leading" secondItem="eX0-Gr-qCo" secondAttribute="leading" constant="40" id="poV-9W-OSp"/>
                             <constraint firstItem="bfm-lk-xsV" firstAttribute="centerX" secondItem="9I9-4Q-YLo" secondAttribute="centerX" id="pxt-xu-z46"/>
                             <constraint firstItem="KiW-PF-osB" firstAttribute="bottom" secondItem="7Wy-nK-5nD" secondAttribute="bottom" constant="-20" id="tzJ-Eg-p27"/>
                             <constraint firstItem="A8I-pX-ssl" firstAttribute="top" secondItem="qRy-UI-lbI" secondAttribute="bottom" constant="10" id="vGk-AX-Lmf"/>
+                            <constraint firstItem="4h4-cl-OFv" firstAttribute="top" secondItem="Gbi-nt-Qry" secondAttribute="bottom" constant="8" id="ww0-e9-tXe"/>
+                            <constraint firstItem="v17-wp-ab7" firstAttribute="top" secondItem="A8I-pX-ssl" secondAttribute="bottom" constant="20" id="xn6-S0-0WG"/>
                             <constraint firstItem="A8I-pX-ssl" firstAttribute="leading" secondItem="eX0-Gr-qCo" secondAttribute="leading" constant="10" id="yQO-8a-fu0"/>
                             <constraint firstItem="bfm-lk-xsV" firstAttribute="bottom" secondItem="qRy-UI-lbI" secondAttribute="bottom" id="zad-Pc-phT"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="consoleTextView" destination="v17-wp-ab7" id="tK7-cO-Cxo"/>
+                        <outlet property="firstMoveButton" destination="Gbi-nt-Qry" id="FnJ-pg-Zgp"/>
                         <outlet property="mainPokemonHPLabel" destination="qRy-UI-lbI" id="Tsy-sz-Gxg"/>
                         <outlet property="mainPokemonHPProgressView" destination="A8I-pX-ssl" id="ZH7-iz-wg7"/>
                         <outlet property="mainPokemonImageView" destination="KiW-PF-osB" id="EfZ-WV-CPt"/>
                         <outlet property="pokeballImageView" destination="nfp-2O-xth" id="5tz-Ku-fDQ"/>
+                        <outlet property="runButton" destination="qVi-Ej-Rng" id="4Sr-QO-F4S"/>
+                        <outlet property="secondMoveButton" destination="1U4-rn-Hxn" id="Y37-Sy-lFl"/>
+                        <outlet property="thirdMoveButton" destination="4h4-cl-OFv" id="gwx-Cq-oF5"/>
                         <outlet property="wildPokemonHPLabel" destination="bfm-lk-xsV" id="I3p-H0-71Y"/>
                         <outlet property="wildPokemonHPProgressView" destination="9I9-4Q-YLo" id="7cw-SS-bzh"/>
                         <outlet property="wildPokemonImageView" destination="fO0-OZ-j1m" id="ai8-me-M0C"/>
@@ -190,7 +291,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L3D-KQ-j6g">
-                                <rect key="frame" x="20" y="313.5" width="335" height="333.5"/>
+                                <rect key="frame" x="40" y="147" width="295" height="500"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dNP-Vb-zFi">
                                     <size key="itemSize" width="50" height="50"/>
@@ -212,10 +313,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="8AL-MM-Oxz" firstAttribute="trailing" secondItem="L3D-KQ-j6g" secondAttribute="trailing" constant="20" id="UZ8-Af-Biq"/>
+                            <constraint firstItem="8AL-MM-Oxz" firstAttribute="trailing" secondItem="L3D-KQ-j6g" secondAttribute="trailing" constant="40" id="UZ8-Af-Biq"/>
                             <constraint firstItem="8AL-MM-Oxz" firstAttribute="bottom" secondItem="L3D-KQ-j6g" secondAttribute="bottom" constant="20" id="d8K-Ar-JUv"/>
-                            <constraint firstItem="L3D-KQ-j6g" firstAttribute="leading" secondItem="8AL-MM-Oxz" secondAttribute="leading" constant="20" id="ogy-Ls-KW9"/>
-                            <constraint firstItem="L3D-KQ-j6g" firstAttribute="height" secondItem="76G-vw-yny" secondAttribute="height" multiplier="0.5" id="suk-dp-2nF"/>
+                            <constraint firstItem="L3D-KQ-j6g" firstAttribute="leading" secondItem="8AL-MM-Oxz" secondAttribute="leading" constant="40" id="ogy-Ls-KW9"/>
+                            <constraint firstItem="L3D-KQ-j6g" firstAttribute="height" secondItem="76G-vw-yny" secondAttribute="height" multiplier="0.75" id="suk-dp-2nF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8AL-MM-Oxz"/>
                     </view>

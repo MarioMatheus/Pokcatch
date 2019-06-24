@@ -59,7 +59,7 @@ class ServicesHelper {
     }
     
     
-    private static func setupTypeIDFrom(url: String) -> Type {
+    static func setupTypeIDFrom(url: String) -> Type {
         let type = Type(context: CoreDataManager.shared.context)
         var url = url
         url.removeLast()

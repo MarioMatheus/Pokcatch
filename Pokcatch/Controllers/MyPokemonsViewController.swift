@@ -14,6 +14,8 @@ class MyPokemonsViewController: UIViewController {
     
     var pokemons: [Pokemon] = []
     
+    var currentPokemonOnPreviewing: Pokemon!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +38,7 @@ class MyPokemonsViewController: UIViewController {
         let pokemonDetailViewCtrl = PokemonDetailViewController()
         let pokemon = pokemons[indexPath.row]
         pokemonDetailViewCtrl.pokemon = pokemon
+        currentPokemonOnPreviewing = pokemon
         
         pokemonDetailViewCtrl.preferredContentSize = CGSize(width: 266, height: 345)
         pokemonDetailViewCtrl.delegate = self
@@ -70,8 +73,10 @@ extension MyPokemonsViewController: UICollectionViewDataSource {
 
 extension MyPokemonsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //        let detailViewCtrl = createDetailViewControllerFor(indexPath: indexPath)
-        //        present(detailViewCtrl, animated: true, completion: nil)
+        let pokemonStatsViewCtrl = PokemonStatsViewController()
+        pokemonStatsViewCtrl.pokemon = pokemons[indexPath.row]
+        
+        present(pokemonStatsViewCtrl, animated: true, completion: nil)
     }
 }
 
@@ -94,7 +99,10 @@ extension MyPokemonsViewController: UIViewControllerPreviewingDelegate {
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        // present(viewControllerToCommit, animated: true, completion: nil)
+        let pokemonStatsViewCtrl = PokemonStatsViewController()
+        pokemonStatsViewCtrl.pokemon = currentPokemonOnPreviewing
+        
+        present(pokemonStatsViewCtrl, animated: true, completion: nil)
     }
     
 }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 enum SummonInterval: TimeInterval {
     case low = 120
@@ -24,7 +25,7 @@ class PokeGenerator {
     var delegate: PokeGeneratorDelegate?
     
     var wildNearPokemons = [Pokemon]()
-    
+//    var wildNearPokemonsMoves = [String: [Move]]()
     
     init(withSummonInterval interval: SummonInterval) {
         verifyPokemonsInCache()
@@ -35,6 +36,8 @@ class PokeGenerator {
                 self.checkWildNearPokemonsToSummon()
             })
         }
+        
+        PokeAPIService.shared.delegate = self
     }
     
     
@@ -75,6 +78,9 @@ class PokeGenerator {
             }
             
             let pokemon = ServicesHelper.convertPokemonJSON(pokemonJSON: pokemonJSON)
+//            self.wildNearPokemonsMoves[pokemonJSON.name] =
+            PokeAPIService.shared.choiceMovesFor(pokemonJSON: pokemonJSON)
+            
             self.wildNearPokemons.append(pokemon)
             self.delegate?.wildPokemonAppear(pokemon)
             completion(pokemon)
@@ -93,4 +99,26 @@ class PokeGenerator {
             })
         }
     }
+}
+
+
+extension PokeGenerator: PokeAPIMovesDelegate {
+    
+    func movesSelected(_ moves: [MoveStatsJSON], forPokemonName name: String) {
+        var movesFormatted = [Move]()
+        
+        moves.forEach { moveStatsJSON in
+            let move = Move(context: CoreDataManager.shared.context)
+            move.accuracy = Int32(moveStatsJSON.accuracy)
+            move.name = moveStatsJSON.name
+            move.power = Int32(moveStatsJSON.power)
+            move.type = ServicesHelper.setupTypeIDFrom(url: moveStatsJSON.type.url)
+            movesFormatted.append(move)
+        }
+        
+//        wildNearPokemonsMoves[name.capitalizingFirstLetter()] = movesFormatted
+        let poke = wildNearPokemons.filter({ $0.name == name.capitalizingFirstLetter() }).first!
+        movesFormatted.forEach({ poke.addToMoves($0) })
+    }
+    
 }

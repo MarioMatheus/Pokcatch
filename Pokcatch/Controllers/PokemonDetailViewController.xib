@@ -11,12 +11,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PokemonDetailViewController" customModule="Pokcatch" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundGradientView" destination="cuF-Sl-fVV" id="cDB-XX-JFy"/>
-                <outlet property="experienceLabel" destination="fIZ-sd-bui" id="EOU-xl-pHf"/>
+                <outlet property="heightLabel" destination="SCB-ex-tEn" id="Bss-wJ-eTv"/>
                 <outlet property="imageView" destination="Pcx-Uz-6EO" id="woP-YA-Pgt"/>
                 <outlet property="nameLabel" destination="y8d-Ul-Zqm" id="F0N-sb-bL6"/>
                 <outlet property="typesLabel" destination="jgS-la-ewM" id="8tI-9H-DRV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="weightLabel" destination="SCB-ex-tEn" id="Xfp-hq-L54"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -53,8 +52,8 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCB-ex-tEn">
-                    <rect key="frame" x="20" y="268.5" width="54" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCB-ex-tEn">
+                    <rect key="frame" x="20" y="268.5" width="51" height="21"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                     <nil key="highlightedColor"/>
@@ -63,12 +62,6 @@
                     <rect key="frame" x="20" y="293.5" width="46" height="21"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIZ-sd-bui">
-                    <rect key="frame" x="224" y="241" width="22" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -81,12 +74,10 @@
                 <constraint firstAttribute="trailing" secondItem="cuF-Sl-fVV" secondAttribute="trailing" id="8Z1-I9-BTg"/>
                 <constraint firstItem="Pcx-Uz-6EO" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="Esd-rA-aOb"/>
                 <constraint firstItem="jgS-la-ewM" firstAttribute="top" secondItem="SCB-ex-tEn" secondAttribute="bottom" constant="4" id="Hap-Xq-AIl"/>
-                <constraint firstAttribute="trailing" secondItem="fIZ-sd-bui" secondAttribute="trailing" constant="20" id="NCk-vA-894"/>
                 <constraint firstItem="y8d-Ul-Zqm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="NPV-Zu-ZQN"/>
                 <constraint firstItem="SCB-ex-tEn" firstAttribute="leading" secondItem="y8d-Ul-Zqm" secondAttribute="leading" id="bBj-Ch-Swo"/>
                 <constraint firstItem="jgS-la-ewM" firstAttribute="leading" secondItem="SCB-ex-tEn" secondAttribute="leading" id="eHn-24-8J8"/>
                 <constraint firstItem="cuF-Sl-fVV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ic6-cX-QuB"/>
-                <constraint firstItem="fIZ-sd-bui" firstAttribute="firstBaseline" secondItem="y8d-Ul-Zqm" secondAttribute="firstBaseline" id="lre-3K-Ugi"/>
                 <constraint firstItem="SCB-ex-tEn" firstAttribute="top" secondItem="y8d-Ul-Zqm" secondAttribute="bottom" constant="4" id="pd8-o3-9h2"/>
                 <constraint firstItem="Pcx-Uz-6EO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pum-IK-eNQ"/>
                 <constraint firstItem="Pcx-Uz-6EO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zst-nR-kBZ"/>

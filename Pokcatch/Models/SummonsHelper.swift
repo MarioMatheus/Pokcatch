@@ -56,9 +56,15 @@ class SummonsHelper {
     }
     
     
-    static func pokemonWillBeCatched(pokemon: Pokemon) -> Bool {
-        let chance = Int.random(in: 0...290)
-        return chance >= pokemon.experience
+    static func pokemonWillBeCatched(pokemon: Pokemon, withHP hp: Int) -> Bool {
+        let chance = Int.random(in: 0...300)
+        return chance >= pokemon.experience + Int32(hp)
+    }
+    
+    
+    static func verifyIfCanRunOf(pokemon: Pokemon) -> Bool {
+        let random = Int.random(in: 0...400)
+        return random > pokemon.experience
     }
     
     

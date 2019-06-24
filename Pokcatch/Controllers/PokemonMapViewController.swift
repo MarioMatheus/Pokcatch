@@ -76,6 +76,7 @@ class PokemonMapViewController: UIViewController {
     @IBAction func myPokesBarButtonDidPressed(_ sender: Any) {
         performSegue(withIdentifier: "MyPokesSegue", sender: nil)
     }
+    
 }
 
 
